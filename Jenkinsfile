@@ -12,22 +12,22 @@ pipeline {
       }
     }
 
-    stage('Bootstrap'){
-      steps {
-        timeout(time: 2, unit: 'MINUTES') {
-          sh 'npm -v'
-          sh 'lerna -v'
-          sh 'npm run bootstrap'
-        }
-      }
-    }
-
     stage('Copy .env'){
       steps {
         timeout(time: 3, unit: 'MINUTES') {
           sh 'cp ../_Persist/mapbul-pub/admin/.env.prod packages/admin/.env.prod'
           sh 'cp ../_Persist/mapbul-pub/ssr/.env.prod packages/ssr/.env.prod'
           sh 'cp ../_Persist/mapbul-pub/server/.env packages/server/src/.env'
+        }
+      }
+    }
+
+    stage('Bootstrap'){
+      steps {
+        timeout(time: 2, unit: 'MINUTES') {
+          sh 'npm -v'
+          sh 'lerna -v'
+          sh 'npm run bootstrap'
         }
       }
     }
