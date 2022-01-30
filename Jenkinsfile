@@ -42,7 +42,7 @@ pipeline {
 
     stage('Server image'){
       steps {
-        timeout(time: 5, unit: 'MINUTES') {
+        timeout(time: 10, unit: 'MINUTES') {
           sh 'docker build -t mapbul-pub-server -f Dockerfile.server .'
         }
       }
@@ -60,7 +60,7 @@ pipeline {
 
     stage('SSR image'){
       steps {
-        timeout(time: 5, unit: 'MINUTES') {
+        timeout(time: 10, unit: 'MINUTES') {
           sh 'docker build -t mapbul-pub-ssr -f Dockerfile.ssr .'
         }
       }
@@ -78,7 +78,7 @@ pipeline {
 
     stage('Admin image'){
       steps {
-        timeout(time: 5, unit: 'MINUTES') {
+        timeout(time: 10, unit: 'MINUTES') {
           sh 'docker build -t mapbul-pub-admin -f Dockerfile.admin .'
         }
       }
