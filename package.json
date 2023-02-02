@@ -64,7 +64,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "lerna": "^3.19.0",
+    "lerna": "^6.4.1",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "scub111-common": "^1.0.2",
